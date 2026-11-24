@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PSV Fansite</title>
+  <meta name="description" content="Een fansite over PSV: spelers, wedstrijden, uitslagen en opstelling.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-in">
+      <div class="logo"><span class="ball">⚽</span> PSV <small>fansite</small></div>
+      <nav id="nav">
+        <button data-tab="spelers" class="active">Spelers</button>
+        <button data-tab="wedstrijden">Wedstrijden</button>
+        <button data-tab="uitslagen">Uitslagen</button>
+        <button data-tab="opstelling">Opstelling</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="next-strip"><div class="wrap"><div id="next" class="next"></div></div></section>
+
+  <section class="kits">
+    <div class="wrap">
+      <div class="kits-head"><img class="club-logo" src="logo.png" alt="" onerror="this.remove()"><h2>Tenues 2026/27</h2></div>
+      <div class="kit-grid" id="kitGrid"></div>
+      <p class="muted small">Illustraties in de kleuren van de tenues. Zet eigen foto's in de map <code>tenues</code> (thuis.png, uit.png, derde.png) en <code>logo.png</code> in de hoofdmap om ze te laten zien.</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section id="spelers" class="tab active">
+      <h2>Spelers</h2>
+      <div class="filters" id="posFilter"></div>
+      <div class="grid" id="spelerGrid"></div>
+    </section>
+
+    <section id="wedstrijden" class="tab">
+      <h2>Aankomende wedstrijden</h2>
+      <div id="programma" class="list"></div>
+    </section>
+
+    <section id="uitslagen" class="tab">
+      <h2>Uitslagen</h2>
+      <div class="filters" id="seizoenFilter"></div>
+      <div id="uitslagStats" class="stats"></div>
+      <div id="uitslagen-lijst" class="list"></div>
+    </section>
+
+    <section id="opstelling" class="tab">
+      <h2>Opstelling</h2>
+      <p id="opsInfo" class="muted"></p>
+      <div class="pitch" id="pitch"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" hidden>
+    <div class="card" role="dialog" aria-modal="true">
+      <button class="close" id="closeModal" aria-label="Sluiten">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">Onofficiële fansite · niet verbonden aan PSV · gegevens kunnen fouten bevatten.</div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
